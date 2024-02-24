@@ -12,10 +12,6 @@ const DEFAULT_COLUMNS = [
 ]
 
 export default function ExpenseTable({expenses, columns = DEFAULT_COLUMNS}) {
-    function getDateDisplayLabel(dateString){
-        return formatDate(dateString);
-    }
-
     function getTableBody(){
         return (
             <tbody>
