@@ -47,7 +47,7 @@ export default function ExpenseTable({expenses, columns = DEFAULT_COLUMNS}) {
 
 	return (
 		<div>
-            <h1>Expense Table</h1>
+            <h3>Expense Table</h3>
             <Table striped bordered hover>
                 {getHeadColumn()}
                 {getTableBody()}

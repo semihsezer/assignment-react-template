@@ -78,7 +78,6 @@ export default function HomePage() {
 	return (
 		<div>
             <h1>HomePage</h1>
-            <Button>Get Expenses</Button>
             <ExpenseTable expenses={expenses} columns={columns}/>
 		</div>
 	);
