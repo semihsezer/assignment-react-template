@@ -1,5 +1,4 @@
 'use client';
-import { useState, useEffect } from 'react';
 import Table from 'react-bootstrap/Table';
 
 const DEFAULT_COLUMNS = [
@@ -21,7 +20,10 @@ export default function ExpenseTable({expenses, columns = DEFAULT_COLUMNS}) {
                             {columns.map((col) => {
                                 let key = expense.id + col.id;
                                 let label = expense[col.id]
-                                return <td key={key}>{expense[col.id]}</td>
+                                if (col.formatter){
+                                    label = col.formatter(expense[col.id])
+                                }
+                                return <td key={key}>{label}</td>
                             })
                             }
                         </tr>
